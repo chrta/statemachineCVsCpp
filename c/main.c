@@ -4,7 +4,7 @@
 #include "context.h"
 
 /**
- * Simpe state machine in c (quick and dirty)
+ * Simple state machine in c (quick and dirty)
  * small mem modell         Program Size: data=4097(near=4097) const=642(near=634) code=1502
  * huge (HLarge) mem modell Program Size: data=4097(near=4097) const=644(near=0) code=1704
  */
@@ -22,15 +22,15 @@ void main (void)  {               /* execution starts here               */
 #ifndef PERFORMANCE		
 	for (;;)
 #endif //PERFORMANCE			
-  {
+	{
 		struct Context fsm;
 		char input;
 		init(&fsm);
 #ifndef PERFORMANCE				
 		printf("Enter character:\n");
-    input = getchar();
-    printf("Processing character '%c'\n", input);
-    processInput(&fsm, input);
+		input = getchar();
+		printf("Processing character '%c'\n", input);
+		processInput(&fsm, input);
 #else //PERFORMANCE
 		input = 'a';
 		processInput(&fsm, input);
@@ -45,5 +45,5 @@ void main (void)  {               /* execution starts here               */
 		input = 'c';
 		processInput(&fsm, input);
 #endif //PERFORMANCE		
-  }
+	}
 }
