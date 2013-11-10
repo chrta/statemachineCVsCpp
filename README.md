@@ -10,12 +10,12 @@ Both were are usable in Keil uvision4 for C166 und lpcxpresso 6.1 (using gcc 4.6
 ####Runtime for small mem
  * clocks: init call 25 clocks
  *         from init = 'a' to end } 273 to 975 -> 702 clocks for 6 state transitions
- *         
+
 ###C++ without new and delete.
  * hlarge mem model:  Program Size: data=4109(near=4109) const=802(near=0) code=2104
  * small mem model:   Program Size: data=4103(near=4103) const=764(near=730) code=1672
 
-####Runtime
+####Runtime for small mem
  * constructor call 102 clocks
  * from char input = 'a'; to } 2571 - 1174 -> 1397 clocks for 6 state transitions
 
